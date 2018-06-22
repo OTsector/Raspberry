@@ -1,5 +1,6 @@
 #!/bin/sh
 #
+# This all is for Kali
 # Resize the root filesystem of a newly flashed Raspbian image.
 # Directly equivalent to the expand_rootfs section of raspi-config.
 # No claims of originality are made.
@@ -10,6 +11,10 @@
 # Check the file system with 'df -h' once it has run and you should see a size
 # close to the known size of your card.
 #
+# How to use:
+# wget -O /boot/raspi-expand-rootfs.sh https://raw.githubusercontent.com/OTsector/Raspberry/master/raspi_expand_rootfs.sh
+# chmod +x /boot/raspi-expand-rootfs.sh
+# sh /boot/raspi-expand-rootfs.sh
 
 # Get the starting offset of the root partition
 PART_START=$(parted /dev/mmcblk0 -ms unit s p | grep "^2" | cut -f 2 -d:)

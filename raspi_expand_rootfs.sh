@@ -13,8 +13,8 @@
 #
 # How to use:
 # wget -O /boot/raspi-expand-rootfs.sh https://raw.githubusercontent.com/OTsector/Raspberry/master/raspi_expand_rootfs.sh
-# chmod +x /boot/raspi-expand-rootfs.sh
-# sh /boot/raspi-expand-rootfs.sh
+# chmod +x /boot/raspi_expand_rootfs.sh
+# sh /boot/raspi_expand_rootfs.sh
 
 # Get the starting offset of the root partition
 PART_START=$(parted /dev/mmcblk0 -ms unit s p | grep "^2" | cut -f 2 -d:)
